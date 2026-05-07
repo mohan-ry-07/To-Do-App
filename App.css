@@ -1,0 +1,120 @@
+#root {
+  /* border:2px solid red; */
+  margin: auto;
+  width: 450px;
+}
+#root .ToDoWindow{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap:5%;
+    background-color: aquamarine;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ToDoWindow input{
+  width: 75%;
+  height: 35px;
+  font-size: 25px;
+}
+#input-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#input-div #add-btn,#update-btn{
+  width: 70px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 500px;
+  background-color: rgb(2, 45, 2);
+  color:white;
+}
+#input-div #update-btn:hover{
+  background-color: green;
+  cursor: pointer;
+}
+#input-div #add-btn:hover{
+  background-color: green;
+  cursor: pointer;
+}
+#item-list{
+  /* width: 100%;
+  height: 30px;
+  font-size: 25px;
+  margin-top:10px;
+  border-bottom:3px solid blueviolet;
+  padding-bottom: 15px; */
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 3px solid blueviolet;
+  padding: 10px 0;
+}
+#item-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 20px;
+}
+
+#item-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+#item-list  .item-btn{
+  height: 35px;
+  width: 70px;
+  border-radius: 500px;
+  cursor: pointer;
+}
+#item-list  #remove-btn{
+  background-color: rgb(210, 10, 10);
+  border-radius:500px;
+  height: 40px;
+  width: 75px;
+  margin-right: 25px;
+}
+#item-list  #edit-btn{
+  background-color: yellow;
+  border-radius:500px;
+  height: 40px;
+  width: 75px;
+  margin-right: 25px;
+}
+#item-list  #remove-btn:hover{
+  background-color: #ff0000;
+}
+#item-list li #edit-btn:hover{
+  background-color: #ccff00;
+}
+
+/* Left side (checkbox + text) */
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;              /* take remaining space */
+  min-width: 0;         /* 🔥 important for wrapping */
+}
+
+/* Make text wrap properly */
+.task-text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Right side buttons */
+.item-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;       /* 🔥 prevents buttons from moving */
+}
